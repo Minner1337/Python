@@ -1,21 +1,3 @@
-"""vn = "Günther"
-nn = "Jauch"
-
-print("Mein Name ist", vn, nn, ".")
-
-
-class Person:
-    def __init__(self, vn, nn):
-        self.vorname = vn
-        self.nachname = nn
-    def speak(self):
-        print("My name is", self.vorname, self.nachname)
-
-P = Person("adolfg", "asdf")
-O = Person("chris", "dawg")
-P.speak()
-O.speak()
-"""
 import random
 
 chosentype = ""
@@ -65,7 +47,12 @@ Plant = Monster(p, 10)
 
 while True:
 
-    print("Wich attack type do you want to use? \n", monsterlist)
+    text =""
+
+    for monster in monsterlist:
+        text+= "\n"+monster
+
+    print("Wich attack type do you want to use? \n", text, "\n")
 
     answer = input()
 
@@ -78,7 +65,7 @@ while True:
     else:
         print("This attacktype doesnt exist.")
 
-    print("Wich monster do you want to attack? \n", monsterlist)
+    print("Wich monster do you want to attack? \n", text, "\n")
 
     answer = input()
 
