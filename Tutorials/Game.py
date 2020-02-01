@@ -14,31 +14,43 @@ while True:
     for monster in monsterlist:
         text+= "\n"+monster
 
-    print("Wich attack type do you want to use? \n", text, "\n")
+    while True:
 
-    answer = input()
+        print("Wich attack type do you want to use? \n", text, "\n")
 
-    if answer == w:
-        chosentype = w
-    elif answer == f:
-        chosentype = f
-    elif answer == p:
-        chosentype = p
-    else:
-        print("This attacktype doesnt exist.")
+        answer = input()
 
-    print("Wich monster do you want to attack? \n", text, "\n")
+        if answer == w:
+            chosentype = w
+            break
+        elif answer == f:
+            chosentype = f
+            break
+        elif answer == p:
+            chosentype = p
+            break
+        else:
+            print("This attacktype doesnt exist.")
+            continue
 
-    answer = input()
+    while True:
 
-    if answer == w:
-        monstertype = Water
-    elif answer == f:
-        monstertype = Fire
-    elif answer == p:
-        monstertype = Plant
-    else:
-        print("This monster doesnt exist.")
+        print("Wich monster do you want to attack? \n", text, "\n")
+
+        answer = input()
+
+        if answer == w:
+            monstertype = Water
+            break
+        elif answer == f:
+            monstertype = Fire
+            break
+        elif answer == p:
+            monstertype = Plant
+            break
+        else:
+            print("This monster doesnt exist.")
+            continue
 
     monstertype.hit(chosentype)
 
